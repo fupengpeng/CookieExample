@@ -9,4 +9,39 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>LoginCLServlet</servlet-name>
+    <servlet-class>com.jiudianlianxian.controller.LoginCLServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginCLServlet</servlet-name>
+    <url-pattern>/LoginCLServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.jiudianlianxian.view.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Error</servlet-name>
+    <servlet-class>com.jiudianlianxian.view.Error</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Error</servlet-name>
+    <url-pattern>/Error</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OK</servlet-name>
+    <servlet-class>com.jiudianlianxian.view.OK</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OK</servlet-name>
+    <url-pattern>/OK</url-pattern>
+  </servlet-mapping>
+
+  
 </web-app>

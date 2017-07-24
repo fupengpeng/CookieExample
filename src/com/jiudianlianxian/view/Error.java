@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2017年7月21日 下午5:51:11
  *
  */
-@WebServlet("/Error")
+//@WebServlet("/Error")
 public class Error extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,7 +38,9 @@ public class Error extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		out.println("<h1>"+request.getAttribute("info")+"</h1><br/>");
+		System.out.println("006");
+
+		out.println("<h1>登录失败</h1><br/>");
 		
 		
 	}

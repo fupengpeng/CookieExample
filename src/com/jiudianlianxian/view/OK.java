@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
- * Title: Ok
+ * Title: OK
  * Description: 给此类一个描述
  * Company: 济宁九点连线信息技术有限公司
  * ProjectName: CookieExample
@@ -20,14 +20,14 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2017年7月21日 下午5:51:17
  *
  */
-@WebServlet("/Ok")
-public class Ok extends HttpServlet {
+//@WebServlet("/OK")
+public class OK extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Ok() {
+    public OK() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,8 +38,10 @@ public class Ok extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		out.println("<h1>"+request.getAttribute("info")+"</h1><br/>");
-		out.println("<a href='/UsersManager/ManageUsers'>返回主界面</a>");
+		out.println("<h1>登录成功</h1><br/>");
+		System.out.println("005");
+
+		out.println("<a href='/CookieExample/LoginServlet'>返回登录界面</a>");
 		
 		
 	}
