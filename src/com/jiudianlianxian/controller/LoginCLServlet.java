@@ -47,8 +47,10 @@ public class LoginCLServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		if (val != null && val.equals("keep")) {
 			//保存用户名和密码、
+			//输入为中文时，要做处理，设置编码格式
+			String accountString = java.net.URLEncoder.encode(account,"utf-8");
 			//创建cookie
-			Cookie cookieAccount = new Cookie("account",account);
+			Cookie cookieAccount = new Cookie("account",accountString);
 			//设置生命周期
 			cookieAccount.setMaxAge(7*2*24*3600);
 			//把cookie信息回写给浏览器

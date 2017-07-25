@@ -45,8 +45,12 @@ public class LoginServlet extends HttpServlet {
 		if (cookies != null) {
 			for (Cookie cookie : cookies) {
 				if(cookie.getName().equals("account")){
+					
+					
 					account = cookie.getValue();
-					System.out.println("account = "+account);
+					//读取cookie时中文处理
+					String accountVal = java.net.URLDecoder.decode(account,"utf-8");
+					System.out.println("accountVal = "+accountVal);
 				}
 				if(cookie.getName().equals("password")){
 					password = cookie.getValue();

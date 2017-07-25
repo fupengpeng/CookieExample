@@ -1,0 +1,32 @@
+session生命周期设置：有两个设置方式，web应用中的优先级高于tomcat的优先级
+    1.tomcat/conf/web。xml修改，对所有的web应用生效
+    2.web应用中的web。xml文件中修改：<session-config>10(表示10分钟)<session-config>      
+    3.代码中session。setMaxInactiveInterval(60),方法设置，60表示60秒内如果不使用此session，则session失效，如果在60秒内使用，则从使用时重新计时60秒，
+        3-1.example：建设银行登录以后，使用session记住用户名和密码，假设如果在5分钟内不在网银网页内操作的话，就自动退出，session对象中保存的属性（用户名和密码）则失效。安全退出按钮实际上是调用了session的invalidate()方法
+session生命周期和cookie生命周期比较
+    1.session生命周期：设置生命周期后，在设置时间内访问的话，就会重新计时。如果web应用重启则session对象属性就会直接失效。invalidate()方法可以使session对象所有属性立即失效，removeAttribute("要删除的属性名")可以删除session对象里面指定的属性。
+    2.cookie生命周期：指的是累计时间，与是否访问过cookie无关
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
